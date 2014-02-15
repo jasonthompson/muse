@@ -3,8 +3,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       css: {
-        src: 'css/scss/*.scss',
-        dest: 'css/screen.css'
+        src: 'assets/css/*.css',
+        dest: 'assets/css/screen.css'
       }
     },
     // uglify: {
@@ -34,18 +34,18 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'css/styles.css': 'css/scss/styles.scss',
-          'css/normalize.css': 'css/scss/normalize.scss'
+          'assets/css/main.css': 'assets/css/scss/main.scss',
+          'assets/css/normalize.css': 'assets/css/scss/normalize.scss'
         }
       }
     },
     watch: {
       html: {
-        files: '*.html',
+        files: ['*.html', '*.hbs'],
       },
       css: {
-        files: 'css/scss/*.scss',
-        tasks: ['sass'],
+        files: 'assets/css/scss/*.scss',
+        tasks: ['sass', 'concat'],
       },
       // js: {
       //   files: ['src/**/*.js', 'test/**/*.js'],
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         },
-        files: ['css/*.css']
+        files: ['css/*.css', '*.hbs']
       }
     }
   });
@@ -70,6 +70,6 @@ module.exports = function(grunt) {
   // grunt.loadNpmTasks('grunt-mocha-test');
   // grunt.registerTask('test', ['jshint', 'mochaTest']);
 
-  grunt.registerTask('default', ['concat', 'sass', 'watch']);
+  grunt.registerTask('default', ['watch', 'sass', 'concat']);
 
 };

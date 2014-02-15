@@ -1,11 +1,11 @@
 /*
-  Theme Name: Muse
-  Theme URI: 
-  Description: The theme for Jason Thompson's weblog
-  Author: Jason Thompson
-  Author URI: http://jthompson.ca
-  Version: 1.0
-  Tags:
+Theme Name: Muse
+Theme URI: 
+Description: The theme for Jason Thompson's weblog
+Author: Jason Thompson
+Author URI: http://jthompson.ca
+Version: 1.0
+Tags:
 
 License:
 License URI:
@@ -14,7 +14,7 @@ License URI:
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
-   */
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,11 +59,11 @@ table {
   border-spacing: 0; }
 
 /* 
-   SCSS Variables
-   */
+SCSS Variables
+*/
 /*
-  Site CSS
-  */
+Site CSS
+*/
 .group:before,
 .group:after {
   visibility: hidden;
@@ -81,7 +81,8 @@ table {
 
 /* IE7 */
 html {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  background: #545454; }
 
 /* Custom CSS */
 body {
@@ -90,8 +91,7 @@ body {
   font-style: normal;
   font-weight: 300;
   color: #3f3e3a;
-  line-height: 1.3em;
-  background: #545454 url(/content/themes/muse/assets/images/linen_bg.png) repeat; }
+  line-height: 1.3em; }
 
 .page {
   -moz-box-shadow: 0px 0px 2px 2px #201f1d;
@@ -101,7 +101,7 @@ body {
   width: 90%;
   max-width: 940px;
   line-height: 1.3em;
-  background: #fff; }
+  background: #eeeeee url(../images/main_bg.png) repeat; }
 
 p {
   color: #3f3e3a;
@@ -116,16 +116,13 @@ a:hover {
   color: #5eacd3; }
 
 /* 
-   Figure/ Image
-   */
-figure p {
-  margin-top: -2.5em; }
-
+Figure/ Image
+*/
 figcaption {
   font-family: "camigodos-web-1", "camigodos-web-2", helvetica, sans;
   font-weight: 300;
-  font-size: .60em;
-  margin: -1.5em .9em 2em 0; }
+  font-size: .65em;
+  margin: -1.5em 0 2em 0; }
 
 img {
   margin: 1em 0 1em 0; }
@@ -136,37 +133,42 @@ img.right {
 
 /* Header */
 header#main {
+  background: #eeeeee url(../images/main_bg.png) repeat;
   padding-bottom: 1%;
   width: 100%;
   overflow: hidden; }
-  header#main a {
-    text-decoration: none;
-    color: #3f3e3a; }
-  header#main a h1 {
-    text-shadow: 0 1px 0 #fff;
-    font-size: 1.2em;
-    font-family: "chaparral-pro-1", "chaparral-pro-2", Georgia, serif;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.2em;
-    margin-top: 2%;
-    margin-bottom: 0;
-    letter-spacing: 0; }
-  header#main img {
-    margin-left: 7%;
-    float: left;
-    padding-top: 1%;
-    height: 4em; }
-  header#main ul {
-    margin: 6% 0 0 26%; }
-    header#main ul li {
-      display: inline;
-      font-size: 1.1em;
-      text-shadow: 0 1px 0 #ddf7ff;
-      font-weight: 700;
-      margin-right: 5em; }
-    header#main ul li:first-child {
-      margin-left: .9em; }
+
+header#main a {
+  margin: 0;
+  text-decoration: none;
+  color: #3f3e3a; }
+
+header#main a h1 {
+  text-shadow: 0 1px 0 #fff;
+  font-size: 1.2em;
+  font-family: "chaparral-pro-1", "chaparral-pro-2", Georgia, serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-top: 2%;
+  margin-bottom: 0;
+  letter-spacing: 0; }
+
+header#main img {
+  margin-left: 7%;
+  float: left;
+  padding-top: 1%;
+  height: 4em; }
+
+header#main ul {
+  margin: 6% 0 0 26%; }
+
+header#main li {
+  display: inline;
+  margin-right: 3.5em;
+  font-size: 1.1em;
+  text-shadow: 0 1px 0 #ddf7ff;
+  font-weight: 700; }
 
 #tagline {
   border-top: 1px solid #2b7ea6;
@@ -184,70 +186,21 @@ header#main {
   color: #2b7ea6;
   font-weight: 200; }
 
-.tooltip {
-  background: transparent;
-  color: #000; }
-
 /* Content */
 #content {
   margin: 0 auto;
   width: 65%; }
-
-#content h1 {
-  margin-left: 11%;
-  font-size: 1.6em;
-  font-weight: 700;
-  line-height: 1em; }
 
 /* Article */
 article {
   margin-bottom: 2em;
   width: 85%; }
 
-article header h1 {
-  margin-left: 32%;
-  font-weight: 700;
-  font-size: 1.6em;
-  line-height: 1em; }
-
 article h2 {
-  font-weight: 700;
-  margin-top: 1.5em;
-  font-size: 1.45em; }
-
-ol {
-  list-style-type: decimal;
-  margin-bottom: 2em; }
-
-ol li {
-  position: relative;
-  margin: 0 0 0em 2em; }
-
-article ul {
-  list-style: disc; }
-
-article ul li {
-  position: relative;
-  margin: 0 0 1em 1em; }
-
-article h3 {
   font-weight: 700; }
 
-blockquote {
-  margin: 1.5em;
-  padding: .5em;
-  border-left: 14px solid #5eacd3;
-  font-style: italic; }
-
-blockquote p {
-  display: inline; }
-
-.note {
-  font-size: .85em;
-  font-style: italic; }
-
 article .info {
-  margin: .5% 0 0 9%;
+  margin: 1% 0 0 9%;
   clear: left;
   float: left;
   width: 16%; }
@@ -258,8 +211,15 @@ article .info .tags {
 
 article .info .published-on {
   color: #3f3e3a;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.6em;
   font-weight: 700;
-  letter-spacing: -0.1em; }
+  color: #2b7ea6;
+  margin-left: 32%;
+  line-height: 1em; }
 
 article header a {
   text-decoration: none; }
@@ -284,8 +244,8 @@ article .article-wrap a {
     font-family: "camigodos-web-1", "camigodos-web-2", helvetica, sans; }
 
 /*
-  Article List
-  */
+Article List
+*/
 ul.article_list {
   margin-top: 1.5em;
   margin-left: 10%; }
@@ -294,7 +254,7 @@ footer ul.article_list {
   margin-left: 0; }
 
 .tags {
-  margin-top: -.5em;
+  margin-top: -0.5em;
   font-size: .65em;
   font-family: "camigodos-web-1", "camigodos-web-2", helvetica, sans;
   font-weight: 300; }
@@ -303,8 +263,8 @@ footer ul.article_list {
   text-decoration: none; }
 
 /*
-  Footer
-  */
+Footer
+*/
 footer {
   background: #3f3e3a;
   overflow: hidden;
@@ -349,9 +309,135 @@ footer #footer-right {
   width: 50%; }
 
 @media screen and (max-width: 900px) {
-  header#main li a {
-    margin-right: -2em; } }
-@media screen and (max-width: 800px) {
-  header#main li a {
-    margin-right: -3em;
-    font-size: .85em; } }
+  .page {
+    width: 95%; }
+
+  .page-nav {
+    width: 90%;
+    margin: 10% auto; }
+
+  header#main li {
+    margin-right: 3em; }
+
+  article .info {
+    margin-top: -10%; }
+
+  article .article-wrap {
+    width: 80%; } }
+@media screen and (max-width: 740px) {
+  header#main ul {
+    margin-left: 25%;
+    margin-top: 1.5em; }
+
+  header#main li {
+    font-size: 1.2em;
+    margin-right: 2em; }
+
+  header#main img {
+    margin-left: 3%; }
+
+  #tagline {
+    font-size: 1.2em; }
+
+  article .info {
+    margin: -10% 0 0 5%; }
+
+  article .info .published-on {
+    color: #3f3e3a;
+    font-weight: 500;
+    letter-spacing: -0.1em;
+    font-size: .75em;
+    line-height: 1.1em; }
+
+  article .info p {
+    font-family: "chaparral-pro-1", "chaparral-pro-2", Georgia, serif;
+    font-size: .75em; }
+
+  header h1 {
+    font-size: 1.4em;
+    margin-left: 27%;
+    font-weight: 700; }
+
+  article div.article-wrap {
+    margin-left: 27%;
+    width: 95%; } }
+@media screen and (max-width: 640px) {
+  header#main li {
+    font-size: 1em; }
+
+  article {
+    width: 90%; }
+
+  article .info {
+    float: none;
+    margin: -2% 0 2% 10%;
+    width: 100%; }
+
+  article header h1 {
+    margin-left: 10%; }
+
+  article .article-wrap {
+    width: 92%;
+    margin-left: 10%; } }
+@media screen and (max-width: 540px) {
+  .page {
+    width: 100%; }
+
+  footer {
+    font-size: .85em; }
+
+  footer #footer-left {
+    float: none;
+    width: 90%; }
+
+  footer #footer-right {
+    float: none;
+    width: 90%; } }
+@media screen and (max-width: 480px) {
+  header#main img {
+    display: block;
+    margin: 3% auto;
+    float: none; }
+
+  header#main ul {
+    margin: 1.5% 0 0 15%;
+    float: none; }
+
+  #tagline {
+    margin-top: 10%;
+    margin-bottom: 10%; }
+
+  article {
+    width: 95%; }
+
+  article .info {
+    margin-left: 4%; }
+
+  article header h1 {
+    margin-left: 4%; }
+
+  article .article-wrap {
+    margin-left: 4%; } }
+@media screen and (max-width: 400px) {
+  header#main ul {
+    margin-left: 5%;
+    margin-top: 4%;
+    text-align: center; }
+
+  header#main li {
+    font-size: 1em;
+    margin-right: 1.31em; }
+
+  #tagline {
+    font-size: 1em;
+    margin-top: 5%;
+    margin-bottom: 15%; }
+
+  article {
+    width: 100%; }
+
+  footer {
+    line-height: 1.2em; }
+
+  footer ul.article-list li {
+    margin-bottom: 2em; } }

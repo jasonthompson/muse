@@ -1,0 +1,5 @@
+-fix About page (add page.php?)
+-clean up scss
+-add topics (tag) archive
+-pull-donw menus for tags and topics?
+-fix responsive breakpoints

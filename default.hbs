@@ -9,31 +9,47 @@
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+
+    {{! Typekit }}
+    <script type="text/javascript" src="http://use.typekit.com/vfg6lmf.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+    <![endif]-->
+
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
+ <div class="page group">
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+  <header id="main">
+    <a href="/" title="home"><img src={{asset "images/logo.png"}} /></a>
 
-    <footer class="site-footer">
-        <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
-        <div class="inner">
-             <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
-             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
-        </div>
-    </footer>
+    <ul>
+      <li><a href="/" title="Jason Thompson's Home Page">HOME</a></li>
+      <li><a href="/articles" title="Articles">ARTICLES</a></li>
+      <li><a href="/about" title="About Digressions">ABOUT</a></li>
+
+    </ul>
+
+  </header>
+
+  <p id="tagline">This is where Jason Thompson thinks outloud.</p>
+
+   {{! Everything else gets inserted here }}
+
+   {{{body}}}
+
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
@@ -41,6 +57,39 @@
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+
+    <footer>
+
+      <div id="footer-left">
+      <h2 class="footer">Who?</h2>
+      <p>Jason Thompson is a husband, father, cyclist, writer, photographer, occasional programmer and all-around trouble-maker based in Toronto, Ontario. [<a href="/about.html" title="More about me and my blog">more</a>]</p>
+
+      <h2>Copyright</h2>
+      <p></a>The material on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons By-NC-SA License</a>.</p>
+
+
+  </div><!--footer-left -->
+
+  <div id="footer-right">
+    <h2>Recent Posts</h2>
+    <ul class='article_list'>
+      {{#foreach posts}}
+      <li>{{date published_at format="DD MMM YYYY"}}
+        {{tags prefix="Posted in: "}}
+      <div class="tags">
+        Posted in
+        {{tags}}
+      </div></li>
+      {{/foreach}}
+
+    </ul>
+    <h2>Elsewhere</h2>
+    <ul class="article_list">
+      <li><a "href="http://www.120babies.ca/" title="My wife's weblog">MM's Weblog</a></li>
+      <li><a href="http://www.twitter.com/jasonthompson" title="Follow me on Twitter">Follow me on Twitter</a></li>
+    </ul>
+  </div><!--footer-right-->
+</footer>
 
 </body>
 </html>
