@@ -74,7 +74,7 @@
     <h2>Recent Posts</h2>
     <ul class='article_list'>
       {{#foreach posts}}
-      <li>{{date published_at format="DD MMM YYYY"}}
+      <li><time datetime={{date published_at format="YYYY-MM-DDThh:mm"}}>{{date published_at format="DD MMM YYYY"}}</time>
         {{tags prefix="Posted in: "}}
       <div class="tags">
         Posted in
